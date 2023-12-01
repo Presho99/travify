@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: #f5f5f5;
+        width: 100vw;
+        min-height: 100vh;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow-x: hidden;
+      }
+
+      .large-text {
+        font-size: 54px;
+      }
+
+      .medium-text {
+        font-size: 30px;
+      }
+
+      .options-text {
+        font-size: 26px;
+      }
+
+      .small-text {
+        font-size: 14px;
+      }
+
+      header {
+        width: 100%;
+        background-color: #fff;
+        display: flex;
+        padding: 20px 30px;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
+      header span {
+        color: blue;
+      }
+
+      nav {
+        width: 400px;
+
+        display: flex;
+        justify-content: space-between;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: black;
+        transition: text-decoration 0.5s ease, color 0.5s ease;
+      }
+
+      a:hover,
+      a.active {
+        text-decoration: underline;
+        color: green;
+      }
+
+      header button {
+        cursor: pointer;
+        outline: none;
+        border: none;
+        padding: 20px;
+        background-color: green;
+        color: #f5f5f5;
+      }
+      main {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      section.hero {
+        display: flex;
+        align-items: center;
+        height: 100vh;
+        margin-top: 60px;
+      }
+
+      .hero-sect {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      #hero-btn {
+        margin-top: 30px;
+        cursor: pointer;
+        outline: none;
+        border: none;
+        padding: 20px;
+        background-color: green;
+        color: #f5f5f5;
+      }
+
+      .hero-sect img {
+        width: 500px;
+        height: 500px;
+        object-fit: cover;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      section.places {
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 30px;
+      }
+
+      .places-header {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .places-header ul {
+        display: flex;
+        width: 400px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      ul li {
+        list-style-type: none;
+        text-decoration: none;
+      }
+
+      li a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+      }
+
+      #places-btn {
+        color: green;
+        cursor: pointer;
+      }
+
+      .container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+      }
+
+      .box {
+        background-color: #fff;
+        width: 300px;
+        height: 300px;
+        object-fit: contain;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+       
+      }
+
+      .box img {
+        width: 100%;
+        height: 70%;
+      }
+
+      .content{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 20px;
+      }
+
+      .content-name p{
+          margin-top: 7px;
+      }
+
+      .content-rating p{
+color: green;
+      }
+
+      footer{
+          padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h3>Tra<span>v</span>ify</h3>
+      <nav>
+        <a href="#" class="active">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Blog</a>
+        <a href="#">Contacts</a>
+      </nav>
+      <button>Sign Up</button>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero-sect">
+          <h2 class="large-text">Wander with Us</h2>
+          <button id="hero-btn">Explore Places</button>
+        </div>
+        <div class="hero-sect" id="hero-img">
+          <img
+            src="https://images.pexels.com/photos/457882/pexels-photo-457882.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt="hero-beach"
+          />
+        </div>
+      </section>
+      <section class="places">
+        <div class="places-header">
+          <h2 class="medium-text">Popular Places</h2>
+          <ul>
+            <li><a href="#" class="active">Beaches</a></li>
+            <li><a href="#">Parks</a></li>
+            <li><a href="#">Museums</a></li>
+            <li id="places-btn">View All</li>
+          </ul>
+        </div>
+        <div class="container">
+          <div class="box">
+            <img
+              src="https://images.pexels.com/photos/1174732/pexels-photo-1174732.jpeg?auto=compress&cs=tinysrgb&w=600"
+              alt="beach 1"
+            />
+            <div class="content">
+              <div class="content-name">
+                <h3>Wasini</h3>
+                <p class="small-text">Kenya</p>
+              </div>
+              <div class="content-rating">
+                <p>4.9</p>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <img
+              src="https://images.pexels.com/photos/1005417/pexels-photo-1005417.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="beach 1"
+            />
+            <div class="content">
+              <div class="content-name">
+                <h3>Wasini</h3>
+                <p class="small-text">Kenya</p>
+              </div>
+              <div class="content-rating">
+                <p>4.9</p>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <img
+              src="https://images.pexels.com/photos/164041/pexels-photo-164041.jpeg?auto=compress&cs=tinysrgb&w=600"
+              alt="beach 1"
+            />
+            <div class="content">
+              <div class="content-name">
+                <h3>Wasini</h3>
+                <p class="small-text">Kenya</p>
+              </div>
+              <div class="content-rating">
+                <p>4.9</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2023 Travify. All Rights Reserved</p>
+    </footer>
+  </body>
+</html>
